@@ -41,6 +41,8 @@ public class ShoppinglistController {
 	}
 	
 	
+	
+	
 	@GetMapping
 	@RequestMapping("/user/{id}/shoppingList/{listId}/showShoppingList")
 	public String getIndividualShoppingList(@PathVariable Integer id, @PathVariable Integer listId, Model model ) {		
