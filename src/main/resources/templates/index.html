@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Shopping Organiser</title>
+    
+    <link href="../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"
+            th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
+
+    <script src="../static/js/jquery-2.1.4.min.js"
+          th:src="@{/js/jquery-2.1.4.min.js}"></script>
+    
+    <link th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
+    
+    
+</head>
+
+<!--  	<div class="container" th:replace="fragments/header :: header"> <p>header</p> 	</div> -->
+	
+	
+	<div class="welcomePage">		
+		<div class="top">
+			<h1>Welcome in Shopping Organizer</h1>
+			<br>		 		 			
+		</div>		
+	
+		<div class="bottom">
+			<br>
+			<div class="g-signin2" data-onsuccess="onSignIn"></div>
+			<a th:href="@{'/user/showUser/'}">Check your shopping!!!</a>
+			<br>			
+		</div>
+
+	</div>
+
+	<!--  <div class="container" th:replace="fragments/footer :: footer"><p>footer</p></div> -->
+
+
+</html>

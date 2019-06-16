@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title >Footer</title>
+
+    <link href="../../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
+
+    <script src="../../static/js/jquery-2.1.4.min.js"
+            th:src="@{/js/jquery-2.1.4.min.js}"></script>
+
+    <link th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
+
+
+
+</head>
+<body>
+
+<div class="footer container-fluid"  th:fragment="footer">
+	<div class="contacts row">
+		<div class="contactDetails col-xs-6">
+			<h4>Contact Us</h4>
+			<p>
+				<!-- <a href="${pageContext.request.contextPath}/contact">-->
+				ziejacode@gmail.com
+			</p>
+		</div>
+		<div class="getSocial col-xs-6">
+			<h4>Get social</h4>
+			<a><img src="/images/facebookLogoWhite.png" th:scr="@{/images/facebookLogoWhite.png}"
+				alt="Facebook logo"></a> 
+			<a><img src="/images/twitterLogoWhite.png" th:scr="@{/images/twitterLogoWhite.png}"
+				alt="Twitter logo"></a>			 
+		</div>
+
+	</div>
+	<div class="copyrights row">
+		<p class="col-xs-12">copyrights ziejacode.com</p>
+	</div>
+</div>
+
+</body>
+</html>

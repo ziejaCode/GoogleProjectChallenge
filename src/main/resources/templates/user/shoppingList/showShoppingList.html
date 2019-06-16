@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Users</title>
+    
+    <link href="../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"
+            th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
+
+    <script src="../static/js/jquery-2.1.4.min.js"
+          th:src="@{/js/jquery-2.1.4.min.js}"></script>
+    
+    <link th:href="@{/css/style.css}" rel="stylesheet" media="screen"/>
+    
+</head>
+
+<body>	 
+<!--	<div class="container" th:replace="fragments/header :: header">	<p>header</p></div> -->
+	 
+	 
+	
+	
+	<div class="showUsersTrainings container">
+	<div class="row">
+		<div id="trainingListTable"
+			class="col-xs-offset-0 col-xs-12 col-sm-offset-1 col-sm-10">	
+			
+			<!--  -->
+			
+			<a th:text="${shoppingList.shoppinglistName}"></a>
+			
+			
+			
+			 <table class="table">
+				<thead>
+					<tr>
+					<!--	<th>Id</th> -->
+						<th>Item Name</th>
+						<th>Item Quantity</th>
+						<td><a th:href="@{'/user/' + ${user.userId} + '/shoppingList/' + ${shoppingList.shoppinglistId} + '/createItem/'}">Add Item</a></td>           
+					</tr>
+					
+				</thead>
+
+				<tbody>						
+					<tr th:each="item:${shoppingList.items}">
+					<!--    <td th:text="${item.itemNo}"></td> -->
+						<td th:text="${item.itemName}"></td>
+						<td th:text="${item.itemQuantity}"></td>	
+					<!--	<td><a th:href="@{'/shoppingList/' + ${item.itemId} + '/update/'}">Update</a></td> -->
+					    <td class="tdDel"><a th:href="@{'/user/' + ${user.userId} + '/shoppingList/' + ${shoppingList.shoppinglistId} + '/deleteItem/' + ${item.itemId}}">delete</a></td>  
+					</tr>
+				</tbody>  
+			</table> 
+			<br>
+			<div id="goBackLinks">
+					<a th:href="@{'/user/' + ${user.userId} + '/showShoppingLists/'}">Go back</a>
+			</div>
+		</div>
+		</div>
+	</div>       
+	
+	
+ <!--  <div class="container" th:replace="fragments/footer :: footer"><p>footer</p></div> --> 
+</body>
+</html>
